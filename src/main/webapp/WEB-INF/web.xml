@@ -8,7 +8,7 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
 			classpath:root-context.xml
-			/WEB-INF/config/action-servlet.xml
+			<!-- /WEB-INF/config/action-servlet.xml -->
 		</param-value>
 	</context-param>
 	
@@ -18,7 +18,7 @@
 	</listener>
 
 	<!-- Processes application requests -->
-	<servlet>
+	<!-- <servlet>
 		<servlet-name>action</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
@@ -31,6 +31,24 @@
 	<servlet-mapping>
 		<servlet-name>action</servlet-name>
 		<url-pattern>/</url-pattern>
+	</servlet-mapping> -->
+	
+	<servlet>
+		<servlet-name>user</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>
+				/WEB-INF/config/user-servlet.xml
+			</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+		
+		
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>user</servlet-name>
+		<url-pattern>*.me</url-pattern>
 	</servlet-mapping>
 
 </web-app>
