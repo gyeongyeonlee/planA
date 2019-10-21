@@ -8,7 +8,7 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
 			classpath:root-context.xml
-			/WEB-INF/config/action-servlet.xml
+			<!-- /WEB-INF/config/action-servlet.xml -->
 		</param-value>
 	</context-param>
 	
@@ -18,19 +18,45 @@
 	</listener>
 
 	<!-- Processes application requests -->
-	<servlet>
+	<!-- <servlet>
 		<servlet-name>action</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<!-- spring이 제공하고 있는 클래스명 -->
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>/WEB-INF/config/action-servlet.xml</param-value>
+			<!-- xml파일에다 어떤일을 할 것인지 알려줘야 함 -->
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 		
 	<servlet-mapping>
 		<servlet-name>action</servlet-name>
+<!-- 		<url-pattern>myPage/myPage.jsp</url-pattern> -->
+		<!-- 추가해봤음 뭐지 이거만 쓰면 서버가 안켜짐-->
 		<url-pattern>/</url-pattern>
+<<<<<<< HEAD
+		<!-- url 패턴이 / 라고 설정되어있는데 /때문에 모든 요청을 받게 하는 설정 -->
+=======
+	</servlet-mapping> -->
+	
+	<servlet>
+		<servlet-name>user</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>
+				/WEB-INF/config/user-servlet.xml
+			</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+		
+		
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>user</servlet-name>
+		<url-pattern>*.me</url-pattern>
+>>>>>>> d00c7696ac8a51922745feec1cadc11d694a3146
 	</servlet-mapping>
 
 </web-app>
