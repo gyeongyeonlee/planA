@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<!-- 3번째 줄 추가한건데 이거 뭐지? -->
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -10,20 +11,21 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/animate.css">
     
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/aos.css">
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/ionicons.min.css">
     
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/flaticon.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/icomoon.css">
+    <!-- 여기 주소 추가 resources하면 무한로딩됨 -->
+    <link rel="stylesheet" href="${contextPath }/resources/css/style.css">
 
     <style>
     *{
@@ -129,7 +131,6 @@
     }
     .form {
       padding: 0 16px;
-      /* max-width: 550px; */
       margin: 30px auto;
       font-size: 13px;
       font-weight: 600;
@@ -195,7 +196,6 @@
     width: 50%;
     margin-right: auto;
     margin-left: auto;
-    /* margin-bottom: 1rem; */
     background-color: transparent; 
     position: relative;
     }
@@ -203,7 +203,6 @@
     .table td {
       color: black;
       font-family:나눔바른고딕;
-      /* padding: 0.75rem; */
       vertical-align: top;
       border-top: 1px solid #dee2e6; }
     .table thead th {
@@ -214,24 +213,6 @@
     .table .table {
       background-color: #F8F9FA; 
     }
-
-    /* .table {
-      min-width: 1000px !important;
-      width: 100%;
-      text-align: center; }
-    .table th {
-      font-weight: 500; }
-    .table .thead-primary {
-      background: black; }
-      .table .thead-primary tr th {
-      padding: 20px 10px;
-      color: #fff !important;
-      border: 1px solid transparent !important; 
-    }
-    .table tbody tr th {
-      border: 1px solid transparent !important;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
-      color: #000000; } */
     .table tbody tr th, .table tbody tr td {
       text-align: left !important;
       vertical-align: middle;
@@ -239,10 +220,6 @@
       border: 1px solid transparent !important;
       border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important; 
     }
-    /* .table tbody tr th ul, .table tbody tr td ul {
-      width: 100%; 
-    } */
-
     th{
       background: #dee2e6;
     }
@@ -437,7 +414,7 @@
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
         <div class="container">
-            <img src="images/air-transport_pink.png" width="50px">&nbsp;&nbsp;&nbsp;<a class="navbar-brand" href="index.html">Plan A</a>
+            <img src="${contextPath}/resources/images/air-transport_pink.png" width="50px">&nbsp;&nbsp;&nbsp;<a class="navbar-brand" href="index.html">Plan A</a>
             <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
             </button>
@@ -456,7 +433,6 @@
             </div>
         </div>
     </nav><br><br><br><br>
-      
       
       
     <!-- 마이페이지 시작 -->
@@ -494,7 +470,7 @@
           <h4 style="font-family: 나눔바른고딕; color:#E2C0BB; text-align:center">History</h>
           <div class="row justify-content-center">
       <!-- 여행 히스토리 이미지-->
-            <img src="../ecoland/images/세계지도.PNG" width="1000px;">
+            <img src="${ contextPath }/resources/images/map.PNG" width="1000px;">
           </div>
           <!-- <u style="color:#E2C0BB;"> -->
             <h4 style="font-family: 나눔바른고딕; color:#757575; text-align:center">
@@ -606,7 +582,7 @@
           <div class="row d-flex">
             <div class="col-md-6 col-lg-4 d-flex ftco-animate">
               <div class="blog-entry justify-content-end">
-                <a href="single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+                <a href="single.html" class="block-20" style="background-image: url('${contextPath }/resources/images/image_1.jpg');">
                 </a>
                 <div class="text float-right d-block">
                   <div class="d-flex align-items-center pt-2 mb-4 topp">
@@ -635,7 +611,7 @@
             <div class="col-md-6 col-lg-4 d-flex ftco-animate">
               <div class="blog-entry justify-content-end">
                 <!-- 사진 -->
-                <a href="single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+                <a href="single.html" class="block-20" style="background-image: url('${contextPath }/resources/images/image_2.jpg');">
                 </a>
                 <div class="text float-right d-block">
                   <div class="d-flex align-items-center pt-2 mb-4 topp">
@@ -663,7 +639,7 @@
 
             <div class="col-md-6 col-lg-4 d-flex ftco-animate">
               <div class="blog-entry">
-                <a href="single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+                <a href="single.html" class="block-20" style="background-image: url('${contextPath }/resources/images/image_3.jpg');">
                 </a>
                 <div class="text float-right d-block">
                   <div class="d-flex align-items-center pt-2 mb-4 topp">
@@ -693,8 +669,8 @@
       </section>
     <!-- 동행구하기 쓴글, 후기 게시판 작성 글 불러오기-->
       <section class="ftco-section testimony-section">
-              <img src="images/blob-shape-2.svg" class="svg-blob" alt="Colorlib Free Template"><!-- 배경에 분홍색 동그라미 -->
-              <img src="images/blob-shape-2.svg" class="svg-blob-2" alt="Colorlib Free Template"><!-- 배경에 분홍색 동그라미 -->
+              <img src="${contextPath }/resources/images/blob-shape-2.svg" class="svg-blob" alt="Colorlib Free Template"><!-- 배경에 분홍색 동그라미 -->
+              <img src="${contextPath }/resources/images/blob-shape-2.svg" class="svg-blob-2" alt="Colorlib Free Template"><!-- 배경에 분홍색 동그라미 -->
 
             <div class="container">
               <div class="row justify-content-center pb-3">
@@ -985,22 +961,22 @@
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
+  <script src="${contextPath }/resources/js/jquery.min.js"></script>
+  <script src="${contextPath }/resources/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="${contextPath }/resources/js/popper.min.js"></script>
+  <script src="${contextPath }/resources/js/bootstrap.min.js"></script>
+  <script src="${contextPath }/resources/js/jquery.easing.1.3.js"></script>
+  <script src="${contextPath }/resources/js/jquery.waypoints.min.js"></script>
+  <script src="${contextPath }/resources/js/jquery.stellar.min.js"></script>
+  <script src="${contextPath }/resources/js/owl.carousel.min.js"></script>
+  <script src="${contextPath }/resources/js/jquery.magnific-popup.min.js"></script>
+  <script src="${contextPath }/resources/js/aos.js"></script>
+  <script src="${contextPath }/resources/js/jquery.animateNumber.min.js"></script>
+  <script src="${contextPath }/resources/js/scrollax.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
+  <script src="${contextPath }/resources/js/google-map.js"></script>
   
-  <script src="js/main.js"></script>
+  <script src="${contextPath }/resources/js/main.js"></script>
   <!-- <script>
       $(function(){
           // 처음 페이지가 로드될 때 여행 히스토리를 분홍색 글씨로 나타내기 위함

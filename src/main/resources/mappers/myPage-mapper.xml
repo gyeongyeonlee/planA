@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="myPageMapper"> <!-- Member에 있는 것을 사용 / type을 Member라고 써줘도 상관없긴 한데 중복될 수 있음-->
+	<!-- 여기 오면 일단 결과를 돌려받을 resultMap부터 생성 -->
+	<resultMap type="com.kh.planA.member.model.vo.Member" id="memberResultSet">
+											<!--어디꺼 가져다 쓰는지 / id에 집어넣음 -->
+<!-- 		property = 자바의 필드변수 이름 / column = DB의 해당 컬럼을 나타냄 -->
+		<id property="mid" column="MID"/> <!--DB의 기본키는 id태그를 사용한다 -->
+<!-- 		필드 안에 있는 이름과 똑같이 써줌 / 뒤에는 상관없음 데이터베이스에 있는 값이 들어올 것임 -->
+ 		<result property="userId" column="USER_ID"/> <!-- 일반 컬럼들은  result로 사용 -->
+<!-- 		데이타베이스의 유저아이디를 매핑 -->
+		<result property="userPwd" column="USER_PWD"/>
+	    <result property="userName" column="USER_NAME"/>
+	    <result property="nickname" column="NICKNAME"/>
+	    <result property="birthDay" column="BIRTHDAY"/>
+	    <result property="phone" column="PHONE"/>
+	    <result property="email" column="EMAIL"/>
+	    <result property="address" column="ADDRESS"/>
+	    <result property="originName" column="ORIGIN_NAME"/>
+	    <result property="changeName" column="CHANGE_NAME"/>
+	    <result property="authkey" column="AUTHKEY"/>
+	</resultMap>
+	
+	<!-- 쿼리문 작성 -->
+	
+</mapper>
