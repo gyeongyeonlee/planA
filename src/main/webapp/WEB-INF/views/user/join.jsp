@@ -10,20 +10,20 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/animate.css">
     
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/aos.css">
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/ionicons.min.css">
     
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/flaticon.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/icomoon.css">
+	<link rel="stylesheet" href="${contextPath }/resources/css/style.css">
 	
 	<style>
 		*{
@@ -80,12 +80,17 @@
             overflow: hidden; 
             clip:rect(0,0,0,0); 
         }
+               
+        .validateLb{
+        	margin-left:20%;
+        	color:red;
+        }
 	</style>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
         <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
             <div class="container">
-              <img src="images/air-transport_pink.png" width="50px">&nbsp;&nbsp;&nbsp;<a class="navbar-brand" href="index.html">Plan A</a>
+              <img src="${contextPath }/resources/images/air-transport_pink.png" width="50px">&nbsp;&nbsp;&nbsp;<a class="navbar-brand" href="index.html">Plan A</a>
               <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
               </button>
@@ -122,7 +127,9 @@
                                 <div class="form-group">
                                     <div class="form-field">
                                         <label for="userId" class="joinInfoLb">아이디</label>
-                                        <input type="text" class="form-control" id="userId" style="width:60%; margin: 0 auto;"><br>
+                                        <input type="text" class="form-control" id="userId" style="width:60%; margin: 0 auto;">
+                                        <span id="validateId" class="validateLb">5~20자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능합니다.</span>
+                                        <br><br>
                                         <label for="userPwd" class="joinInfoLb">비밀번호</label>
                                         <input type="password" class="form-control" id="userPwd" style="width:60%; margin: 0 auto;"><br>
                                         <label for="userPwd2" class="joinInfoLb">비밀번호 재확인</label>
@@ -216,35 +223,36 @@
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
-    
-    <script src="js/main.js"></script>
+    <script src="${contextPath }/resources/js/jquery.min.js"></script>
+  <script src="${contextPath }/resources/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="${contextPath }/resources/js/popper.min.js"></script>
+  <script src="${contextPath }/resources/js/bootstrap.min.js"></script>
+  <script src="${contextPath }/resources/js/jquery.easing.1.3.js"></script>
+  <script src="${contextPath }/resources/js/jquery.waypoints.min.js"></script>
+  <script src="${contextPath }/resources/js/jquery.stellar.min.js"></script>
+  <script src="${contextPath }/resources/js/owl.carousel.min.js"></script>
+  <script src="${contextPath }/resources/js/jquery.magnific-popup.min.js"></script>
+  <script src="${contextPath }/resources/js/aos.js"></script>
+  <script src="${contextPath }/resources/js/jquery.animateNumber.min.js"></script>
+  <script src="${contextPath }/resources/js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="${contextPath }/resources/js/google-map.js"></script>
+  
+  <script src="${contextPath }/resources/js/main.js"></script>
 
-    <script>
-    $(function(){
-        $('#uploadBtn').on('change', function(){
-            if(window.FileReader){
-                console.log($(this));
-                var fileName = $(this)[0].files[0].name;
-            }else{
-                var fileName = $(this).val().split('/').pop().split('\\').pop();
-            }
-            $(this).siblings('#fileName').val(fileName);
-        });
+    <script>   
+    $('#uploadBtn').on('change', function(){
+        if(window.FileReader){
+            console.log($(this));
+            var fileName = $(this)[0].files[0].name;
+        }else{
+            var fileName = $(this).val().split('/').pop().split('\\').pop();
+        }
+        $(this).siblings('#fileName').val(fileName);
     });
+    
+    
+    
     </script>
     </body>
 

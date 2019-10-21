@@ -58,7 +58,7 @@
 			  <li class="nav-item"><a href="togetherBoardList.html" class="nav-link"><span>동행 구하기</span></a></li>
 			  <li class="nav-item"><a href="review.html" class="nav-link"><span>여행 후기</span></a></li>
 	          <li class="nav-item"><a href="login.html" class="nav-link"><span>로그인</span></a></li>
-			  <li class="nav-item"><a href="join.html" class="nav-link"><span>회원가입</span></a></li>
+			  <li class="nav-item"><a href="join.me" class="nav-link"><span>회원가입</span></a></li>
 			  <li class="nav-item"><a href="myPage.html" class="nav-link"><span>마이페이지</span></a></li>
 	        </ul>
 	      </div>
