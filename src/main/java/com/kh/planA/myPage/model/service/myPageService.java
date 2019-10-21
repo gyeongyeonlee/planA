@@ -1,4 +1,4 @@
-package com.kh.planA.board.model.service;
+package com.kh.planA.myPage.model.service;
 
 public class myPageService {
 

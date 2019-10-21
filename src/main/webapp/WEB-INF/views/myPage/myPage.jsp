@@ -470,7 +470,7 @@
           <h4 style="font-family: 나눔바른고딕; color:#E2C0BB; text-align:center">History</h>
           <div class="row justify-content-center">
       <!-- 여행 히스토리 이미지-->
-            <img src="${ contextPath }/resources/images/map.PNG" width="1000px;">
+            <img src="${ contextPath }/resources/images/map.png" width="1000px;">
           </div>
           <!-- <u style="color:#E2C0BB;"> -->
             <h4 style="font-family: 나눔바른고딕; color:#757575; text-align:center">

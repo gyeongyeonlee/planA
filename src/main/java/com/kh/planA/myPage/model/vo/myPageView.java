@@ -1,4 +1,4 @@
-package com.kh.planA.board.model.vo;
+package com.kh.planA.myPage.model.vo;
 
 public class myPageView {
 
