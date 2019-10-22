@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/functions" prefix = "fn" %>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -10,20 +12,20 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/animate.css">
     
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/aos.css">
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/ionicons.min.css">
     
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-   <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/flaticon.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/icomoon.css">
+   <link rel="stylesheet" href="${contextPath }/resources/css/style.css">
    
    <style>
        *{
@@ -60,8 +62,8 @@
         .btn-lock {
         display: inline-block;
         background: #20cca5;
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
         box-sizing: border-box;
         padding: 0px 0 0 0px;
         border-radius: 50%;
@@ -183,7 +185,7 @@
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
         <div class="container">
-            <img src="images/air-transport_pink.png" width="50px">&nbsp;&nbsp;&nbsp;<a class="navbar-brand" href="index.html">Plan A</a>
+            <img src="${contextPath }/resources/images/air-transport_pink.png" width="50px">&nbsp;&nbsp;&nbsp;<a class="navbar-brand" href="index.jsp">Plan A</a>
             <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
             </button>
@@ -194,10 +196,10 @@
               <li class="nav-item"><a href="tammaInfo.html" class="nav-link"><span>테마 여행</span></a></li>
               <li class="nav-item"><a href="travelInformation.html" class="nav-link"><span>여행지 정보</span></a></li>
               <li class="nav-item"><a href="togetherBoardList.html" class="nav-link"><span>동행 구하기</span></a></li>
-              <li class="nav-item"><a href="review.html" class="nav-link"><span>여행 후기</span></a></li>
-	            <li class="nav-item"><a href="login.html" class="nav-link"><span>로그인</span></a></li>
-              <li class="nav-item"><a href="join.html" class="nav-link"><span>회원가입</span></a></li>
-              <li class="nav-item"><a href="myPage.html" class="nav-link"><span>마이페이지</span></a></li>
+              <li class="nav-item"><a href="reviewList.me" class="nav-link"><span>여행 후기</span></a></li>
+	            <li class="nav-item"><a href="login.me" class="nav-link"><span>로그인</span></a></li>
+              <li class="nav-item"><a href="join.me" class="nav-link"><span>회원가입</span></a></li>
+              <li class="nav-item"><a href="myPage.me" class="nav-link"><span>마이페이지</span></a></li>
             </ul>
             </div>
         </div>
@@ -214,139 +216,91 @@
         </div>
     
         <div class="row d-flex">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="blog-entry justify-content-end">
-              <a href="reviewDetail.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
-              <div class="text float-right d-block">
-                <div class="d-flex align-items-center pt-2 mb-4 topp">
-                  <div class="one mr-2">
-                    <span class="day">12</span>
-                  </div>
-                  <div class="two">
-                    <span class="yr">2019</span>
-                    <span class="mos">april</span>
-                  </div>
-                </div>
-                <h3 class="heading"><a href="reviewDetail.html">Why Lead Generation is Key for Business Growth</a></h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <div class="d-flex align-items-center mt-4 meta">
-                  <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span
-                        class="ion-ios-arrow-round-forward"></span></a></p>
-                  <p class="ml-auto mb-0">
-                    <a href="#" class="mr-2">Admin</a>
-                    <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="blog-entry justify-content-end">
-              <a href="reviewDetail.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
-              <div class="text float-right d-block">
-                <div class="d-flex align-items-center pt-2 mb-4 topp">
-                  <div class="one mr-2">
-                    <span class="day">12</span>
-                  </div>
-                  <div class="two">
-                    <span class="yr">2019</span>
-                    <span class="mos">april</span>
-                  </div>
-                  <!-- <div class="float-right" style="padding-left: 60%;">
-                    <input id="inpLock1" type="checkbox" class="inpLock"/><label class="btn-lock" for="inpLock1"><svg width="30" height="33"
-                      viewBox="0 -5 20 50">
-                      <path class="lockb"
-                        d="M27 27C27 34.1797 21.1797 40 14 40C6.8203 40 1 34.1797 1 27C1 19.8203 6.8203 14 14 14C21.1797 14 27 19.8203 27 27ZM15.6298 26.5191C16.4544 25.9845 17 25.056 17 24C17 22.3431 15.6569 21 14 21C12.3431 21 11 22.3431 11 24C11 25.056 11.5456 25.9845 12.3702 26.5191L11 32H17L15.6298 26.5191Z">
-                      </path>
-                      <path class="lock" d="M6 21V10C6 5.58172 9.58172 2 14 2V2C18.4183 2 22 5.58172 22 10V21"></path>
-                      <path class="bling" d="M29 20L31 22"></path>
-                      <path class="bling" d="M31.5 15H34.5"></path>
-                      <path class="bling" d="M29 10L31 8"></path>
-                    </svg></label>
-                  </div> -->
-                </div>
+          <c:forEach var="r" items="${list}">
+	          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+	            <div class="blog-entry">
+	              <a href="reviewDetail.html" class="block-20" style="background-image: url('${contextPath }/resources/images/image_3.jpg'); width:300px; height:300px ">
+	              </a>
+	              <div class="text float-right d-block">
+	                <div class="d-flex align-items-center pt-2 mb-4 topp">
+	                  <div class="one mr-2">
+	                    <span class="day">${fn:split(r.rDate,'-')[2]}</span>
+	                  </div>
+	                  <div class="two">
+	                    <span class="yr">${fn:split(r.rDate,'-')[0]}</span>
+	                    
+	                    <c:choose>
+	                    	<c:when test="${fn:split(r.rDate,'-')[1] == '1'}">
+	                    		<span class="mos">January</span>
+	                    	</c:when>
+	                    	<c:when test="${fn:split(r.rDate,'-')[1] == '2'}">
+	                    		<span class="mos">February</span>
+	                    	</c:when>
+	                    	<c:when test="${fn:split(r.rDate,'-')[1] == '3'}">
+	                    		<span class="mos">March</span>
+	                    	</c:when>
+	                    	<c:when test="${fn:split(r.rDate,'-')[1] == '4'}">
+	                    		<span class="mos">April</span>
+	                    	</c:when>
+	                    	<c:when test="${fn:split(r.rDate,'-')[1] == '5'}">
+	                    		<span class="mos">May</span>
+	                    	</c:when>
+	                    	<c:when test="${fn:split(r.rDate,'-')[1] == '6'}">
+	                    		<span class="mos">June</span>
+	                    	</c:when>
+	                    	<c:when test="${fn:split(r.rDate,'-')[1] == '7'}">
+	                    		<span class="mos">July</span>
+	                    	</c:when>
+	                    	<c:when test="${fn:split(r.rDate,'-')[1] == '8'}">
+	                    		<span class="mos">August</span>
+	                    	</c:when>
+	                    	<c:when test="${fn:split(r.rDate,'-')[1] == '9'}">
+	                    		<span class="mos">September</span>
+	                    	</c:when>
+	                    	<c:when test="${fn:split(r.rDate,'-')[1] == '10'}">
+	                    		<span class="mos">October</span>
+	                    	</c:when>
+	                    	<c:when test="${fn:split(r.rDate,'-')[1] == '11'}">
+	                    		<span class="mos">November</span>
+	                    	</c:when>
+	                    	<c:when test="${fn:split(r.rDate,'-')[1] == '12'}">
+	                    		<span class="mos">December</span>
+	                    	</c:when>
+	                    </c:choose>
+	                  </div>
+	                </div>
+	
+	                <div class="float-right" name="rLock">
+	                  <input id="inpLock2" type="checkbox" class="inpLock"/><label class="btn-lock" for="inpLock2"><svg svg width="25" height="28"
+	                    viewBox="0 -5 20 50">
+	                    <path class="lockb"
+	                      d="M27 27C27 34.1797 21.1797 40 14 40C6.8203 40 1 34.1797 1 27C1 19.8203 6.8203 14 14 14C21.1797 14 27 19.8203 27 27ZM15.6298 26.5191C16.4544 25.9845 17 25.056 17 24C17 22.3431 15.6569 21 14 21C12.3431 21 11 22.3431 11 24C11 25.056 11.5456 25.9845 12.3702 26.5191L11 32H17L15.6298 26.5191Z">
+	                    </path>
+	                    <path class="lock" d="M6 21V10C6 5.58172 9.58172 2 14 2V2C18.4183 2 22 5.58172 22 10V21"></path>
+	                    <path class="bling" d="M29 20L31 22"></path>
+	                    <path class="bling" d="M31.5 15H34.5"></path>
+	                    <path class="bling" d="M29 10L31 8"></path>
+	                  </svg></label>
+	                </div>
+	
+	                <h3 class="heading"><a href="reviewDetail.html">${r.rTitle}</a></h3>
+	                <p>${r.rContent}</p>
+	                <div class="d-flex align-items-center mt-4 meta">
+	                  <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a>
+	                  </p>
+	                  <p class="ml-auto mb-0">
+	                    <a href="#" class="mr-2">${r.nickname}</a>
+	                    <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                  </p>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
 
-                <div class="float-right">
-                  <input id="inpLock1" type="checkbox" class="inpLock"/><label class="btn-lock" for="inpLock1"><svg width="30" height="33"
-                    viewBox="0 -5 20 50">
-                    <path class="lockb"
-                      d="M27 27C27 34.1797 21.1797 40 14 40C6.8203 40 1 34.1797 1 27C1 19.8203 6.8203 14 14 14C21.1797 14 27 19.8203 27 27ZM15.6298 26.5191C16.4544 25.9845 17 25.056 17 24C17 22.3431 15.6569 21 14 21C12.3431 21 11 22.3431 11 24C11 25.056 11.5456 25.9845 12.3702 26.5191L11 32H17L15.6298 26.5191Z">
-                    </path>
-                    <path class="lock" d="M6 21V10C6 5.58172 9.58172 2 14 2V2C18.4183 2 22 5.58172 22 10V21"></path>
-                    <path class="bling" d="M29 20L31 22"></path>
-                    <path class="bling" d="M31.5 15H34.5"></path>
-                    <path class="bling" d="M29 10L31 8"></path>
-                  </svg></label>
-                </div>
-                <h3 class="heading"><a href="reviewDetail.html">Why Lead Generation is Key for Business Growth</a></h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <div class="d-flex align-items-center mt-4 meta">
-                  <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span
-                        class="ion-ios-arrow-round-forward"></span></a></p>
-                  <p class="ml-auto mb-0">
-                    <a href="#" class="mr-2">Admin</a>
-                    <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="blog-entry">
-              <a href="reviewDetail.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
-              <div class="text float-right d-block">
-                <div class="d-flex align-items-center pt-2 mb-4 topp">
-                  <div class="one mr-2">
-                    <span class="day">12</span>
-                  </div>
-                  <div class="two">
-                    <span class="yr">2019</span>
-                    <span class="mos">april</span>
-                  </div>
-                  <!-- <div class="float-right" style="padding-left: 60%;">
-                    <input id="inpLock2" type="checkbox" class="inpLock"/><label class="btn-lock" for="inpLock2"><svg width="30" height="33"
-                      viewBox="0 -5 20 50">
-                      <path class="lockb"
-                        d="M27 27C27 34.1797 21.1797 40 14 40C6.8203 40 1 34.1797 1 27C1 19.8203 6.8203 14 14 14C21.1797 14 27 19.8203 27 27ZM15.6298 26.5191C16.4544 25.9845 17 25.056 17 24C17 22.3431 15.6569 21 14 21C12.3431 21 11 22.3431 11 24C11 25.056 11.5456 25.9845 12.3702 26.5191L11 32H17L15.6298 26.5191Z">
-                      </path>
-                      <path class="lock" d="M6 21V10C6 5.58172 9.58172 2 14 2V2C18.4183 2 22 5.58172 22 10V21"></path>
-                      <path class="bling" d="M29 20L31 22"></path>
-                      <path class="bling" d="M31.5 15H34.5"></path>
-                      <path class="bling" d="M29 10L31 8"></path>
-                    </svg></label>
-                  </div> -->
-                </div>
+		  </c:forEach>
 
-                <div class="float-right">
-                  <input id="inpLock2" type="checkbox" class="inpLock"/><label class="btn-lock" for="inpLock2"><svg width="30" height="33"
-                    viewBox="0 -5 20 50">
-                    <path class="lockb"
-                      d="M27 27C27 34.1797 21.1797 40 14 40C6.8203 40 1 34.1797 1 27C1 19.8203 6.8203 14 14 14C21.1797 14 27 19.8203 27 27ZM15.6298 26.5191C16.4544 25.9845 17 25.056 17 24C17 22.3431 15.6569 21 14 21C12.3431 21 11 22.3431 11 24C11 25.056 11.5456 25.9845 12.3702 26.5191L11 32H17L15.6298 26.5191Z">
-                    </path>
-                    <path class="lock" d="M6 21V10C6 5.58172 9.58172 2 14 2V2C18.4183 2 22 5.58172 22 10V21"></path>
-                    <path class="bling" d="M29 20L31 22"></path>
-                    <path class="bling" d="M31.5 15H34.5"></path>
-                    <path class="bling" d="M29 10L31 8"></path>
-                  </svg></label>
-                </div>
 
-                <h3 class="heading"><a href="reviewDetail.html">Why Lead Generation is Key for Business Growth</a></h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <div class="d-flex align-items-center mt-4 meta">
-                  <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a>
-                  </p>
-                  <p class="ml-auto mb-0">
-                    <a href="#" class="mr-2">Admin</a>
-                    <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-    
+<!-- sidebar -->    
           <div class="col-lg-3 sidebar ftco-animate">
             <div class="sidebar-box ftco-animate mb-3">
               <a href="writeReview.html" class="btn btn-primary" style="width: 247px;"><span class="ion-ios-brush"></span>후기 작성</a>
@@ -444,22 +398,22 @@
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
+  <script src="${contextPath }/resources/js/jquery.min.js"></script>
+  <script src="${contextPath }/resources/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="${contextPath }/resources/js/popper.min.js"></script>
+  <script src="${contextPath }/resources/js/bootstrap.min.js"></script>
+  <script src="${contextPath }/resources/js/jquery.easing.1.3.js"></script>
+  <script src="${contextPath }/resources/js/jquery.waypoints.min.js"></script>
+  <script src="${contextPath }/resources/js/jquery.stellar.min.js"></script>
+  <script src="${contextPath }/resources/js/owl.carousel.min.js"></script>
+  <script src="${contextPath }/resources/js/jquery.magnific-popup.min.js"></script>
+  <script src="${contextPath }/resources/js/aos.js"></script>
+  <script src="${contextPath }/resources/js/jquery.animateNumber.min.js"></script>
+  <script src="${contextPath }/resources/js/scrollax.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
+  <script src="${contextPath }/resources/js/google-map.js"></script>
   
-  <script src="js/main.js"></script>
+  <script src="${contextPath }/resources/js/main.js"></script>
     
   </body>
 </html>

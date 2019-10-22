@@ -50,6 +50,7 @@
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
+			<!-- a태그 주소를 .me로 바꿔주기! -->
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav nav ml-auto">
 			  <li class="nav-item"><a href="myRoute.html" class="nav-link"><span>나만의 여행</span></a></li>
@@ -59,7 +60,7 @@
 			  <li class="nav-item"><a href="review.html" class="nav-link"><span>여행 후기</span></a></li>
 	          <li class="nav-item"><a href="login.html" class="nav-link"><span>로그인</span></a></li>
 			  <li class="nav-item"><a href="join.me" class="nav-link"><span>회원가입</span></a></li>
-			  <li class="nav-item"><a href="myPage.html" class="nav-link"><span>마이페이지</span></a></li>
+			  <li class="nav-item"><a href="myPage.me" class="nav-link"><span>마이페이지</span></a></li>
 	        </ul>
 	      </div>
 	    </div>

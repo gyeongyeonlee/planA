@@ -1,5 +1,16 @@
 package com.kh.planA.myPage.model.service;
 
-public class myPageService {
+import java.util.List;
 
-}
+public interface myPageService {
+
+	String myCheckListSave(String test);
+		
+	
+	
+	
+	
+	
+	
+	}
+

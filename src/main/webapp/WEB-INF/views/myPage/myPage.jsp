@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="${contextPath }/resources/css/icomoon.css">
     <!-- 여기 주소 추가 resources하면 무한로딩됨 -->
     <link rel="stylesheet" href="${contextPath }/resources/css/style.css">
-
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <style>
     *{
         font-family: '나눔바른고딕';
@@ -436,7 +436,6 @@
       
       
     <!-- 마이페이지 시작 -->
-
     <div class="ftco-section-search">
       <div class="container0">
           <div class="row">
@@ -480,89 +479,149 @@
             &nbsp&nbsp&nbsp&nbsp
             <div><!--폼이랑 저장,초기화까지담은 div-->
             <div class="row justify-content-center" align-items> <!-- justify-content-center 가운데정렬-->
-                <!-- div안에 가운데의 가운데정렬 -->
+                <!-- div안에 가운데의 가운데정렬 --> 
                 <!-- 체크리스트 -->
-                <div class="checkList" id="checkList">
+                <div class="checkList" id="checkList1">
                   <!-- <span style="width:350px; height: 550px; display: inline-block; "> -->
-                  <form class="form">
+                  <div class="form" id="formList1" action="mCheckListSave.me">
                     <h5 style="font-family: 나눔바른고딕; color:#757575">필수 준비물</h5>
-                    <div class="inputGroup" style="width:220px;"><input id="option1" name="option1" type="checkbox"/><label for="option1">여권</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option2" name="option2" type="checkbox"/><label for="option2">여권사본</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option3" name="option3" type="checkbox"/><label for="option3">항공권(E티켓)</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option4" name="option4" type="checkbox"/><label for="option4">현금(원화,외화)</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option5" name="option5" type="checkbox"/><label for="option5">신분증, 운전면허증</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option6" name="option6" type="checkbox"/><label for="option6">신용카드</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option7" name="option7" type="checkbox"/><label for="option7">여행사 보험증</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option8" name="option8" type="checkbox"/><label for="option8">숙소 주소 및 연락처</label></div>
-                  </form>
+                    <div class="inputGroup" style="width:220px;"><input id="option1" name="option" type="checkbox"/><label for="option1">여권</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option2" name="option" type="checkbox"/><label for="option2">여권사본</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option3" name="option" type="checkbox"/><label for="option3">항공권(E티켓)</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option4" name="option" type="checkbox"/><label for="option4">현금(원화,외화)</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option5" name="option" type="checkbox"/><label for="option5">신분증, 운전면허증</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option6" name="option" type="checkbox"/><label for="option6">신용카드</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option7" name="option" type="checkbox"/><label for="option7">여행사 보험증</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option8" name="option" type="checkbox"/><label for="option8">숙소 주소 및 연락처</label></div>
+                  </div>
                 </div>
-                <div class="checkList" id="checkList">
-                  <form class="form">
+                <div class="checkList" id="checkList2">
+                  <div class="form" id="formList2" action="mCheckListSave.me">
                     <h5 style="font-family: 나눔바른고딕; color:#757575">여행관련 & 전자기기</h5>
-                    <div class="inputGroup" style="width:220px;"><input id="option9" name="option9" type="checkbox"/><label for="option9">여행 가이드북</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option10" name="option10" type="checkbox"/><label for="option10">여행 일정표</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option11" name="option11" type="checkbox"/><label for="option11">지도</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option12" name="option12" type="checkbox"/><label for="option12">필기 도구</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option13" name="option13" type="checkbox"/><label for="option13">카메라(충전기, 메모리)</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option14" name="option14" type="checkbox"/><label for="option14">핸드폰 충전기</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option15" name="option15" type="checkbox"/><label for="option15">멀티 어댑터</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option16" name="option16" type="checkbox"/><label for="option16">노트북 & 충전기</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option17" name="option17" type="checkbox"/><label for="option17">삼각대</label></div>
-                  </form>
+                    <div class="inputGroup" style="width:220px;"><input id="option9" name="option" type="checkbox"/><label for="option9">여행 가이드북</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option10" name="option" type="checkbox"/><label for="option10">여행 일정표</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option11" name="option" type="checkbox"/><label for="option11">지도</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option12" name="option" type="checkbox"/><label for="option12">필기 도구</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option13" name="option" type="checkbox"/><label for="option13">카메라(충전기, 메모리)</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option14" name="option" type="checkbox"/><label for="option14">핸드폰 충전기</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option15" name="option" type="checkbox"/><label for="option15">멀티 어댑터</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option16" name="option" type="checkbox"/><label for="option16">노트북 & 충전기</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option17" name="option" type="checkbox"/><label for="option17">삼각대</label></div>
+                  </div>
                 </div>
-                <div class="checkList" id="checkList">
-                  <form class="form">
+                <div class="checkList" id="checkList3">
+                  <div class="form" id="formList3" action="mCheckListSave.me">
                     <h5 style="font-family: 나눔바른고딕; color:#757575">세면도구 & 화장품</h5>
-                    <div class="inputGroup" style="width:220px;"><input id="option18" name="option18" type="checkbox"/><label for="option18">칫솔 & 치약</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option19" name="option19" type="checkbox"/><label for="option19">샴푸 & 린스</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option26" name="option26" type="checkbox"/><label for="option26">기초 화장품(스킨, 로션)</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option20" name="option20" type="checkbox"/><label for="option20">폼 클렌저, 클렌징 오일</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option21" name="option21" type="checkbox"/><label for="option21">바디클렌저 & 샤워타월</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option24" name="option124" type="checkbox"/><label for="option24">선크림, 바디선크림</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option25" name="option125" type="checkbox"/><label for="option25">아이 & 립 리무버</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option23" name="option23" type="checkbox"/><label for="option23">브러쉬</label></div>
-                    <div class="inputGroup" style="width:220px;"><input id="option27" name="option27" type="checkbox"/><label for="option27">마스크팩</label></div>
-                  </form>
+                    <div class="inputGroup" style="width:220px;"><input id="option18" name="option" type="checkbox"/><label for="option18">칫솔 & 치약</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option19" name="option" type="checkbox"/><label for="option19">샴푸 & 린스</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option20" name="option" type="checkbox"/><label for="option20">기초 화장품(스킨, 로션)</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option21" name="option" type="checkbox"/><label for="option21">폼 클렌저, 클렌징 오일</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option22" name="option" type="checkbox"/><label for="option22">바디클렌저 & 샤워타월</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option23" name="option" type="checkbox"/><label for="option23">선크림, 바디선크림</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option24" name="option" type="checkbox"/><label for="option24">아이 & 립 리무버</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option25" name="option" type="checkbox"/><label for="option25">브러쉬</label></div>
+                    <div class="inputGroup" style="width:220px;"><input id="option26" name="option" type="checkbox"/><label for="option26">마스크팩</label></div>
+                  </div>
                 </div>
-                <div class="checkList" id="checkList" >
-                  <form class="form">
+                <div class="checkList" id="checkList4">
+                  <div class="form" id="formList4" action="mCheckListSave.me">
                     <h5 style="font-family: 나눔바른고딕; color:#757575">약품 & 생활용품</h5>
-                      <div class="inputGroup" style="width:220px;"><input id="option31" name="option31" type="checkbox"/><label for="option31">종합연고, 약 & 밴드</label></div>
-                      <div class="inputGroup" style="width:220px;"><input id="option33" name="option33" type="checkbox"/><label for="option33">렌즈 & 세척액</label></div>
-                      <div class="inputGroup" style="width:220px;"><input id="option34" name="option34" type="checkbox"/><label for="option34">수건</label></div>
-                      <div class="inputGroup" style="width:220px;"><input id="option35" name="option35" type="checkbox"/><label for="option35">드라이기</label></div>
-                      <div class="inputGroup" style="width:220px;"><input id="option36" name="option36" type="checkbox"/><label for="option36">지퍼백</label></div>
-                      <div class="inputGroup" style="width:220px;"><input id="option39" name="option39" type="checkbox"/><label for="option39">여성용품</label></div>
-                      <div class="inputGroup" style="width:220px;"><input id="option40" name="option40" type="checkbox"/><label for="option40">휴지 & 물티슈</label></div>
-                      <div class="inputGroup" style="width:220px;"><input id="option41" name="option41" type="checkbox"/><label for="option41">머리끈 & 삔</label></div>
-                      <div class="inputGroup" style="width:220px;"><input id="option42" name="option42" type="checkbox"/><label for="option42">목베개 & 수면안대</label></div>
-                  </form>
+                      <div class="inputGroup" style="width:220px;"><input id="option27" name="option" type="checkbox"/><label for="option27">종합연고, 약 & 밴드</label></div>
+                      <div class="inputGroup" style="width:220px;"><input id="option28" name="option" type="checkbox"/><label for="option28">렌즈 & 세척액</label></div>
+                      <div class="inputGroup" style="width:220px;"><input id="option29" name="option" type="checkbox"/><label for="option29">수건</label></div>
+                      <div class="inputGroup" style="width:220px;"><input id="option30" name="option" type="checkbox"/><label for="option30">드라이기</label></div>
+                      <div class="inputGroup" style="width:220px;"><input id="option31" name="option" type="checkbox"/><label for="option31">지퍼백</label></div>
+                      <div class="inputGroup" style="width:220px;"><input id="option32" name="option" type="checkbox"/><label for="option32">여성용품</label></div>
+                      <div class="inputGroup" style="width:220px;"><input id="option33" name="option" type="checkbox"/><label for="option33">휴지 & 물티슈</label></div>
+                      <div class="inputGroup" style="width:220px;"><input id="option34" name="option" type="checkbox"/><label for="option34">머리끈 & 삔</label></div>
+                      <div class="inputGroup" style="width:220px;"><input id="option35" name="option" type="checkbox"/><label for="option35">목베개 & 수면안대</label></div>
+                  </div>
                 </div>
-                <div class="checkList" id="checkList">
-                  <form class="form">
+                <div class="checkList" id="checkList5">
+                  <div class="form" id="formList5" action="mCheckListSave.me">
                       <h5 style="font-family: 나눔바른고딕; color:#757575">의류 & 신발 & 가방</h5>
-                      <div class="inputGroup" style="width:220px;"><input id="option44" name="option44" type="checkbox"/><label for="option44">속옷</label></div>
-                      <div class="inputGroup" style="width:220px;"><input id="option46" name="option46" type="checkbox"/><label for="option46">상의 & 하의</label></div>
-                      <div class="inputGroup" style="width:220px;"><input id="option47" name="option47" type="checkbox"/><label for="option47">아우터</label></div>
-                      <div class="inputGroup" style="width:220px;"><input id="option48" name="option48" type="checkbox"/><label for="option48">원피스</label></div>
-                      <div class="inputGroup" style="width:220px;"><input id="option49" name="option49" type="checkbox"/><label for="option49">잠옷</label></div>
-                      <div class="inputGroup" style="width:220px;"><input id="option50" name="option50" type="checkbox"/><label for="option50">모자 & 양말</label></div>
-                      <div class="inputGroup" style="width:220px;"><input id="option37" name="option37" type="checkbox"/><label for="option37">선글라스 & 시계</label></div>
-                      <div class="inputGroup" style="width:220px;"><input id="option52" name="option52" type="checkbox"/><label for="option52">운동화 & 샌들 & 슬리퍼</label></div>
-                      <div class="inputGroup" style="width:220px;"><input id="option55" name="option55" type="checkbox"/><label for="option55">수영복</label></div>
-                  </form>
+                      <div class="inputGroup" style="width:220px;"><input id="option36" name="option" type="checkbox"/><label for="option36">속옷</label></div>
+                      <div class="inputGroup" style="width:220px;"><input id="option37" name="option" type="checkbox"/><label for="option37">상의 & 하의</label></div>
+                      <div class="inputGroup" style="width:220px;"><input id="option38" name="option" type="checkbox"/><label for="option38">아우터</label></div>
+                      <div class="inputGroup" style="width:220px;"><input id="option39" name="option" type="checkbox"/><label for="option39">원피스</label></div>
+                      <div class="inputGroup" style="width:220px;"><input id="option40" name="option" type="checkbox"/><label for="option40">잠옷</label></div>
+                      <div class="inputGroup" style="width:220px;"><input id="option41" name="option" type="checkbox"/><label for="option41">모자 & 양말</label></div>
+                      <div class="inputGroup" style="width:220px;"><input id="option42" name="option" type="checkbox"/><label for="option42">선글라스 & 시계</label></div>
+                      <div class="inputGroup" style="width:220px;"><input id="option43" name="option" type="checkbox"/><label for="option43">운동화 & 샌들 & 슬리퍼</label></div>
+                      <div class="inputGroup" style="width:220px;"><input id="option44" name="option" type="checkbox"/><label for="option44">수영복</label></div>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <div class="container" style="margin-left: 1185px;">
-              <a href="#" class="btn btn-primary2"><strong>저장</strong></a>
-              <a href="#" class="btn btn-primary2"><strong>초기화</strong></a>
+            <div class="container" style="margin-left: 80%;">
+              <a href="#" class="btn btn-primary2" id="formupdate" onclick="return update()"><strong>저장</strong></a>
+              <a href="#" class="btn btn-primary2" id="formdelete" onclick="return uncheckAll();"><strong>초기화</strong></a>
             </div>
-
         </div>
       </section>
       </div>
+      
+      <script>
+      	// 다중 checkbox 타입의 값 데이터베이스에서 저장, 불러오기, 출력
+      	// https://webisfree.com/2015-03-10/%EB%8B%A4%EC%88%98%EC%9D%98-input-checkbox-%ED%83%80%EC%9E%85%EC%9D%98-%EA%B0%92-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%EC%97%90%EC%84%9C-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0-%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0-%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0
+      	 
+      	// https://feel2you84.tistory.com/entry/2%EA%B0%9C%EC%9D%B4%EC%83%81-%ED%8F%BC%EB%8B%A4%EC%A4%91-%ED%8F%BC%EC%9D%84-%EB%8F%99%EC%8B%9C-%EC%A0%84%EC%86%A1submit%ED%95%98%EA%B8%B0
+      	// 다중 폼 한곳으로 보내기
+      	
+      	// https://lng1982.tistory.com/80
+      	// 체크리스트 저장
+      	
+      	//checkList
+		//체크리스트들을 배열로 만들고
+ 		//스트링으로 바꿔서 디비에 저장하기
+ 		
+    	// 체크 되어 있는 값 추출
+		function update() {
+				// 클릭한 값 가져오기
+				var test = $("input[name=option]:checked");
+				console.log(test);
+				
+				var test1 = "";
+				for(var i = 0; i < test.length; i++){ 		// test의 갯수만큼 for문돌리기
+					//if(typeof test[i].id != 'undefined')
+					if(i == test.length-1){
+						test1 += test[i].id;
+						// length의 마지막번호는 그냥 넣고
+					} else{
+						test1 += test[i].id + "/";
+						// 아닌건 / 붙여서 넣음
+					}
+				}
+				location.href="mCheckListSave.me?data="+test1;
+				
+				/* // 아이디 값 가져오기
+				console.log(test1);
+				
+				// 값 잘라서 가져오기
+				for(var j in test){
+					var testSplit = test1.split('/');
+				} */
+				
+				
+				//console.log(testSplit);
+				//var update1 = confirm('저장하시겠습니까?');
+				// testSplit 디비에 저장
+				
+		}
+     
+     
+      	// 초기화 버튼을 눌렀을 때
+      	function uncheckAll() {
+      		var update1 = confirm('초기화 하시겠습니까?');
+            $("#uncheckAll").click(function(){
+            	$("input[name=box]:checkbox").dach(function(){
+            		$(this).attr("checkde", false);
+            	});
+            });
+            return true;
+            };
+      </script>
+      
 
     <!-- 탭 두번째 버튼 클릭 시-->
     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-post-tab">
@@ -1005,7 +1064,7 @@
         // 처음 페이지가 로드될 때 여행 히스토리를 분홍색 글씨로 나타내기 위함
         if($('a[name=tabMenu]').eq(0).attr('aria-selected') == "true"){
             $('h6[name=tabName]').eq(0).css('color','#E2C0BB');
-            console.log($('a[name=tabMenu]').eq(0).attr('aria-selected'));
+//             console.log($('a[name=tabMenu]').eq(0).attr('aria-selected'));
         }
 
         
@@ -1021,6 +1080,9 @@
         });
     }); 
 </script>
+
+
+
 
 <script>
   $(document).ready(function(){
