@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="reviewMapper">
+	<resultMap type="Review" id="reviewResultSet">
+		<id column="RID" property="rId"/>
+		<result column="USER_ID" property="userId"/>
+		<result column="RDATE" property="rDate"/>
+		<result column="RTAG" property="rTag"/>
+		<result column="COUNTRY" property="country"/>
+		<result column="RTITLE" property="rTitle"/>
+		<result column="RCONTENT" property="rContent"/>
+		<result column="RORIGIN_NAME" property="photo1"/> <!-- 고쳐야함 -->
+		<result column="RCHANGE_NAME" property="photo2"/>  <!-- 고쳐야함 -->
+		<result column="RLOCK" property="rLock"/>
+	</resultMap>
+
+	<select id="getListCount" parameterType="string" resultType="int">
+		SELECT COUNT(*)
+		FROM REVIEW
+		WHERE RLOCK!=1 OR USER_ID=#{userId}
+	</select>
+	
+	<select id="selectList" parameterType="string" resultMap="reviewResultSet">
+		SELECT R.*, U.NICKNAME FROM REVIEW R
+		JOIN USER_INFO U ON(R.USER_ID = U.USER_ID)
+		WHERE R.RLOCK!=1 OR R.USER_ID=#{userId}
+	</select>
+
+
+
+
+
+
+
+
+</mapper>
