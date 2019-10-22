@@ -30,7 +30,7 @@ public class myPageController {
 	@RequestMapping("mCheckListSave.me")
 	public String myCheckListSave(String data) {
 		// String check는 아무런 값이 없음
-		System.out.println("controller로 보낸 id값 :" + data + "Service로 가는중~!");
+		System.out.println("controller로 보낸 id값 :" + data + " Service로 가는중~!");
 		
 		String test = mService.myCheckListSave(data);
 		// check에 값이 없기때문에 null값이 들어감
@@ -61,7 +61,19 @@ public class myPageController {
 //		return "myPage/myPage";
 //	}
 	
+//  // 나의 계획 가져오기
+//	@RequestMapping("")
+//	public String myPage3() {
+//		return "/";
+//	
+//	}
 	
+//  // 맞춤 여행지 가져오기
+//	@RequestMapping("")
+//	public String myPage3() {
+//		return "/";
+//	
+//	}
 	
 	
 //	// 여행 후기 작성글 불러오기
