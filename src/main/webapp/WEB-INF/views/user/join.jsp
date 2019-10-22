@@ -85,6 +85,11 @@
         	margin-left:20%;
         	color:red;
         }
+        
+        #duplicateId{
+        	margin-left:20%;
+        	color:green;
+        }
 	</style>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -103,7 +108,7 @@
                     <li class="nav-item"><a href="togetherBoardList.html" class="nav-link"><span>동행 구하기</span></a></li>
                     <li class="nav-item"><a href="review.html" class="nav-link"><span>여행 후기</span></a></li>
                     <li class="nav-item"><a href="login.html" class="nav-link"><span>로그인</span></a></li>
-                    <li class="nav-item"><a href="join.html" class="nav-link"><span>회원가입</span></a></li>
+                    <li class="nav-item"><a href="join.me" class="nav-link"><span>회원가입</span></a></li>
                     <li class="nav-item"><a href="myPage.html" class="nav-link"><span>마이페이지</span></a></li>
                 </ul>
               </div>
@@ -121,25 +126,36 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="search-wrap-1 ftco-animate p-4">
-                    <form action="#" class="search-property-1">
+                    <form action="insertUser.me" class="search-property-1" method="post" encType="multipart/form-data" id="joinForm">
                         <div class="row">
                             <div class="col-lg align-items-end">
                                 <div class="form-group">
                                     <div class="form-field">
                                         <label for="userId" class="joinInfoLb">아이디</label>
                                         <input type="text" class="form-control" id="userId" style="width:60%; margin: 0 auto;">
-                                        <span id="validateId" class="validateLb">5~20자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능합니다.</span>
+                                        <span id="validateId" class="validateLb"></span>
+                                        <span id="duplicateId"></span>
+                                        <input type="hidden" id="idValidateCheck" value="0">
+                                        <input type="hidden" id="idDuplicateCheck" value="0">
                                         <br><br>
                                         <label for="userPwd" class="joinInfoLb">비밀번호</label>
-                                        <input type="password" class="form-control" id="userPwd" style="width:60%; margin: 0 auto;"><br>
+                                        <input type="password" class="form-control" id="userPwd" style="width:60%; margin: 0 auto;">
+                                        <span id="validatePwd" class="validateLb"></span>
+                                        <input type="hidden" id="pwdValidateCheck" value="0"><br><br>
                                         <label for="userPwd2" class="joinInfoLb">비밀번호 재확인</label>
-                                        <input type="password" class="form-control" id="userPwd2" style="width:60%; margin: 0 auto;"><br>
+                                        <input type="password" class="form-control" id="userPwd2" style="width:60%; margin: 0 auto;">
+                                        <span id="validatePwd2" class="validateLb"></span>
+                                        <input type="hidden" id="pwdValidateCheck2" value="0"><br><br>
                                         <label for="userName" class="joinInfoLb">이름</label>
-										<input type="text" class="form-control" id="userName" style="width:60%; margin: 0 auto;"><br>
+										<input type="text" class="form-control" id="userName" style="width:60%; margin: 0 auto;">
+										<span id="validateName" class="validateLb"></span>
+                                        <input type="hidden" id="nameValidateCheck" value="0"><br><br>
 										<label for="nickName" class="joinInfoLb">닉네임</label>
-                                        <input type="text" class="form-control" id="nickName" style="width:60%; margin: 0 auto;"><br>
+                                        <input type="text" class="form-control" id="nickName" style="width:60%; margin: 0 auto;">
+                                        <span id="validateNick" class="validateLb"></span>
+                                        <input type="hidden" id="nickValidateCheck" value="0"><br><br>
                                         <label for="birthYear" class="joinInfoLb">생년월일</label><br>
-										<input type="text" class="form-control" id="birthYear" placeholder="년(4자리)">&nbsp;&nbsp;
+										<input type="text" class="form-control" id="birthYear" placeholder="년(4자리)" maxlength="4">&nbsp;&nbsp;
 										<select name="birthMonth" id="birthMonth" class="form-control">
 											<option value="mon">월</option>
 											<option value="1">1</option>
@@ -155,18 +171,27 @@
 											<option value="11">11</option>
 											<option value="12">12</option>
 										</select>
-										<input type="text" class="form-control" id="birthDay" placeholder="일"><br><br>
+										<input type="text" class="form-control" id="birthDay" placeholder="일" maxlength="2">
+										<span id="validateBirth" class="validateLb"></span>
+                                        <input type="hidden" id="birthYearValidateCheck" value="0">
+                                        <input type="hidden" id="birthMonthValidateCheck" value="0">
+                                        <input type="hidden" id="birthDayValidateCheck" value="0"><br><br>
 										<label for="phone" class="joinInfoLb">휴대폰 번호</label>
-                                        <input type="text" class="form-control" id="phone" style="width:60%; margin: 0 auto;"><br>
+                                        <input type="text" class="form-control" id="phone" style="width:60%; margin: 0 auto;"
+                                        placeholder="'-' 없이 입력" maxlength="11">
+                                        <span id="validatePhone" class="validateLb"></span>
+                                        <input type="hidden" id="phoneValidateCheck" value="0"><br><br>
 										<label for="email" class="joinInfoLb">이메일</label>
-                                        <input type="text" class="form-control" id="email" style="width:60%; margin: 0 auto;"><br>										   
+                                        <input type="text" class="form-control" id="email" style="width:60%; margin: 0 auto;">
+                                        <span id="validateEmail" class="validateLb"></span>
+                                        <input type="hidden" id="emailValidateCheck" value="0"><br><br>										   
                                         <label class="joinInfoLb">프로필 사진</label>&nbsp;&nbsp;&nbsp;&nbsp;
                                         <div class="profile">
                                             <input type="text" class="form-control" id="fileName" value="선택된 파일 없음" readonly>
                                             <label for="uploadBtn" class="form-control btn btn-primary" id="fileLb">찾아보기</label>
                                             <input type="file" id="uploadBtn" class="uploadBtn">
                                         </div><br><br>
-                                        <input type="submit" class="form-control btn btn-primary" value="회원가입" style="width:60%; margin: 0 auto;"><br>
+                                        <input type="submit" class="form-control btn btn-primary" value="회원가입" onclick="return validate();" style="width:60%; margin: 0 auto;"><br>
                                     </div>
                             </div>
                         </div>
@@ -241,6 +266,7 @@
   <script src="${contextPath }/resources/js/main.js"></script>
 
     <script>   
+    // 파일 업로드 버튼 디자인
     $('#uploadBtn').on('change', function(){
         if(window.FileReader){
             console.log($(this));
@@ -251,8 +277,267 @@
         $(this).siblings('#fileName').val(fileName);
     });
     
+    $(function(){
+       	var userIdCheck = RegExp(/^[a-z0-9_\-]{5,20}$/);
+       	var userPwdCheck = RegExp(/^(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]|.*[0-9]).{6,16}$/);
+       	var userNameCheck = RegExp(/^[가-힣]{2,4}|[a-zA-Z]{2,10}\s[a-zA-Z]{2,10}$/);
+       	var nickNameCheck = RegExp(/^[가-힣]{2,8}|[a-zA-Z]{4,10}$/);
+       	var birthYearCheck = RegExp(/^[0-9]{4}$/);
+       	var birthMonthCheck = RegExp(/^[0-9]{1,2}$/);
+       	var phoneCheck = RegExp(/^01[0179][0-9]{7,8}$/);
+       	var emailCheck = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+$/);
+        	  
+     	// 아이디 정규식 확인
+    	$('#userId').blur(function(){
+			$('#duplicateId').hide();
+    		if($('#userId').val() == ""){
+    			$('#validateId').text("필수 정보입니다.");
+    			$('#validateId').show();
+    			$('#idValidateCheck').val(0);
+    			$('#idDuplicateCheck').val(0);
+    		}else{
+    			if(!userIdCheck.test($('#userId').val())){
+   					$('#validateId').text("5~20자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능합니다.");
+       				$('#validateId').show();
+       				$('#idValidateCheck').val(0);
+       				$('#idDuplicateCheck').val(0);
+    			}else{
+    				// 아이디 중복 확인
+    				$.ajax({
+    	    			url: "duplicationCheck.me",
+    	    			data: {id:$('#userId').val()},
+    	    			success: function(data){
+    	    				$('#validateId').hide();
+    	    				if(data.isUsable == true){   	    					
+    	    					$('#duplicateId').text("사용 가능한 아이디입니다.");
+    	    					$('#duplicateId').css("color","green");
+    	    					$('#duplicateId').show();
+    	    					$('#idValidateCheck').val(1);
+    	    					$('#idDuplicateCheck').val(1);
+    	    				}else{
+    	    					$('#duplicateId').text("이미 사용중인 아이디입니다.");
+    	    					$('#duplicateId').css("color","red");
+    	    					$('#duplicateId').show();
+    	    					$('#idValidateCheck').val(1);
+    	    					$('#idDuplicateCheck').val(0);
+    	    				}
+    	    			},
+    	    			error: function(request,status,error){
+    	    				console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+    	    			}
+    	    		});
+    			} 			
+    		}   		 		
+    	});
+     	
+     	// 비밀번호 정규식 확인
+     	$('#userPwd').blur(function(){
+     		if($('#userPwd').val() == ""){
+     			$('#validatePwd').text("필수 정보입니다.");
+     			$('#validatePwd').show();
+     			$('#pwdValidateCheck').val(0);
+     		}else{
+     			if(!userPwdCheck.test($("#userPwd").val())){
+     				$('#validatePwd').text("6~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.");
+         			$('#validatePwd').show();
+         			$('#pwdValidateCheck').val(0);
+     			}else{
+     				$('#validatePwd').hide();
+     				$('#pwdValidateCheck').val(1);     				
+     			}   			
+     		}
+     	});
+     	
+     	// 비밀번호와 비밀번호 재확인이 같은지 확인
+     	$('#userPwd2').blur(function(){
+     		if($('#userPwd2').val() == ""){
+     			$('#validatePwd2').text("필수 정보입니다.");
+     			$('#validatePwd2').show();
+     			$('#pwdValidateCheck2').val(0);
+     		}else{
+     			if($('#userPwd').val() == $('#userPwd2').val()){
+     				$('#validatePwd2').hide();
+     				$('#pwdValidateCheck2').val(1);
+     			}else{
+     				$('#validatePwd2').text("비밀번호가 일치하지 않습니다.");
+         			$('#validatePwd2').show();
+         			$('#pwdValidateCheck2').val(0);
+     			}
+     		}
+     	});
+     	
+     	// 이름 정규식 확인
+     	$('#userName').blur(function(){
+     		if($('#userName').val() == ""){
+     			$('#validateName').text("필수 정보입니다.");
+     			$('#validateName').show();
+     			$('#nameValidateCheck').val(0);
+     		}else{
+     			if(!userNameCheck.test($('#userName').val())){
+     				$('#validateName').text("한글과 영문 대 소문자를 사용하세요. (특수기호, 공백 사용 불가)");
+     				$('#validateName').show();
+     				$('#nameValidateCheck').val(0);
+     			}else{
+     				$('#validateName').hide();
+     				$('#nameValidateCheck').val(1);
+     			}
+     		}
+     	});
+     	
+     	// 닉네임 정규식 확인
+     	$('#nickName').blur(function(){
+     		if($('#nickName').val() == ""){
+     			$('#validateNick').text("필수 정보입니다.");
+     			$('#validateNick').show();
+     			$('#nickValidateCheck').val(0);
+     		}else{
+     			if(!nickNameCheck.test($('#nickName').val())){
+     				$('#validateNick').text("한글 2~8자 또는 영문 4~10자를 입력하세요.");
+         			$('#validateNick').show();
+         			$('#nickValidateCheck').val(0);
+     			}else{
+     				$('#validateNick').hide();
+         			$('#nickValidateCheck').val(1);
+     			}
+     		}
+     	});
+     	
+     	// 생년 정규식 확인
+     	$('#birthYear').blur(function(){
+     		if($('#birthYear').val() == ""){
+     			$('#validateBirth').text("필수 정보입니다.");
+     			$('#validateBirth').show();
+     			$('#birthYearValidateCheck').val(0);
+     		}else{
+				$('#validateBirth').hide();
+				$('#birthYearValidateCheck').val(1);	
+     		}
+     		
+     		if(!birthYearCheck.test($('#birthYear').val()) || (Number($('#birthYear').val()) < 1920 || Number($('#birthYear').val()) > 2019)){
+  				$('#validateBirth').text("태어난 년도 4자리를 정확하게 입력하세요.");
+      			$('#validateBirth').show();
+      			$('#birthYearValidateCheck').val(0);
+      		}else if($('#birthDay').val() == ""){
+      			$('#validateBirth').text("태어난 일(날짜) 2자리를 정확하게 입력하세요.");
+       			$('#validateBirth').show();
+       			$('#birthDayValidateCheck').val(0);
+      		}else if($('#birthMonthValidateCheck').val() == "0"){
+      			$('#validateBirth').text("생년월일을 다시 확인해주세요.");
+       			$('#validateBirth').show();
+       			$('#birthMonthValidateCheck').val(0);
+      		}
+     	});
+     	
+     	// 생월 셀렉트박스 이벤트
+     	$('#birthMonth').change(function(){
+     		if($('#birthMonth').val() == "mon"){
+     			$('#birthMonthValidateCheck').val(0);
+     			$('#validateBirth').text("생년월일을 다시 확인해주세요.");
+       			$('#validateBirth').show();
+     		}else{
+     			$('#birthMonthValidateCheck').val(1);
+     			$('#validateBirth').hide();
+     		}
+     		
+     		if($('#birthYear').val() == ""){
+   				$('#validateBirth').text("태어난 년도 4자리를 정확하게 입력하세요.");
+     			$('#validateBirth').show();
+     			$('#birthYearValidateCheck').val(0);
+   			}else if($('#birthDay').val() == ""){
+   				$('#validateBirth').text("태어난 일(날짜) 2자리를 정확하게 입력하세요.");
+       			$('#validateBirth').show();
+       			$('#birthDayValidateCheck').val(0);
+   			}
+     	});
+     	
+     	// 생일 정규식 확인
+     	$('#birthDay').blur(function(){
+   			if($('#birthDay').val() == "" || !birthMonthCheck.test($('#birthDay').val()) || $('#birthDay').val() == "0"){
+   				$('#validateBirth').text("태어난 일(날짜) 2자리를 정확하게 입력하세요.");
+       			$('#validateBirth').show();
+       			$('#birthDayValidateCheck').val(0);
+   			}else{
+   				$('#validateBirth').hide();
+				$('#birthDayValidateCheck').val(1);
+   			}
+   			
+   			if($('#birthYear').val() == "0"){
+   				$('#validateBirth').text("태어난 년도 4자리를 정확하게 입력하세요.");
+     			$('#validateBirth').show();
+     			$('#birthYearValidateCheck').val(0);
+   			}else if($('#birthMonthValidateCheck').val() == "0"){
+   				$('#validateBirth').text("생년월일을 다시 확인해주세요.");
+       			$('#validateBirth').show();
+       			$('#birthMonthValidateCheck').val(0);
+   			}
+     	});
+     	
+     	// 휴대폰 번호 정규식 확인
+     	$('#phone').blur(function(){
+     		if($('#phone').val() == ""){
+     			$('#validatePhone').text("필수 정보입니다.");
+     			$('#validatePhone').show();
+     			$('#phoneValidateCheck').val(0);
+     		}else if(!phoneCheck.test($('#phone').val())){
+     			$('#validatePhone').text("휴대폰 번호를 다시 확인해주세요.");
+     			$('#validatePhone').show();
+     			$('#phoneValidateCheck').val(0);
+     		}else{
+     			$('#validatePhone').hide();
+     			$('#phoneValidateCheck').val(1);
+     		}
+     	});
+     	
+     	// 이메일 정규식 확인
+     	$('#email').blur(function(){
+     		if($('#email').val() == ""){
+     			$('#validateEmail').text("필수 정보입니다.");
+     			$('#validateEmail').show();
+     			$('#emailValidateCheck').val(0);
+     		}else if(!emailCheck.test($('#email').val())){
+     			$('#validateEmail').text("올바른 이메일 양식으로 입력해주세요.");
+     			$('#validateEmail').show();
+     			$('#emailValidateCheck').val(0);
+     		}else{
+     			$('#validateEmail').hide();
+     			$('#emailValidateCheck').val(1);
+     		}
+     	});
+    });
     
-    
+    function validate(){
+    	if($('#idValidateCheck').val() == "0" || $('#idDuplicateCheck').val() == "0"){
+    		alert("사용 가능한 아이디를 입력하세요.");
+    		$("#userId").focus();
+    		return false;
+    	}else if($('#pwdValidateCheck').val() == "0" || $('#pwdValidateCheck2').val() == "0"){
+    		alert("비밀번호를 확인해주세요.");
+    		$("#userPwd").focus();
+    		return false;
+    	}else if($('#nameValidateCheck').val() == "0"){
+    		alert("이름을 확인해주세요.");
+    		$("#userName").focus();
+    		return false;
+    	}else if($('#nickValidateCheck').val() == "0"){
+    		alert("닉네임을 확인해주세요.");
+    		$("#nickName").focus();
+    		return false;
+    	}else if($('#birthYearValidateCheck').val() == "0" || $('#birthMonthValidateCheck').val() == "0" || $('#birthDayValidateCheck').val() == "0"){
+    		alert("생년월일을 확인해주세요.");
+    		$("#birthYear").focus();
+    		return false;
+    	}else if($('#phoneValidateCheck').val() == "0"){
+    		alert("휴대폰 번호를 확인해주세요.");
+    		$('#phone').focus();
+    		return false;
+    	}else if($('#emailValidateCheck').val() == "0"){
+    		alert("올바른 이메일 양식으로 입력해주세요.");
+    		$('#email').focus();
+    		return false;
+    	}else{
+    		$('#joinForm').submit();
+    	}
+    }
     </script>
     </body>
 

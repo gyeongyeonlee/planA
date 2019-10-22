@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="User">
+	<!-- 여기 오면 일단 결과를 돌려받을 resultMap부터 생성 -->
+	<!-- <resultMap id="userResultSet" type="User">
+		<id column="MID" property="mid"/>
+		<result column="USER_ID" property="userId"/>
+		<result column="USER_PWD" property="userPwd"/>
+		<result column="USER_NAME" property="userName"/>
+		<result column="EMAIL" property="email"/>
+		<result column="BIRTHDAY" property="birthDay"/>
+		<result column="GENDER" property="gender"/>
+		<result column="PHONE" property="phone"/>
+		<result column="ADDRESS" property="address"/>
+		<result column="ENROLL_DATE" property="enrollDate"/>
+		<result column="MODIFY_DATE" property="modifyDate"/>
+		<result column="STATUS" property="status"/>
+	</resultMap>
+	
+	로그인 정보 조회용 쿼리문
+	<select id="loginCheck" resultMap="memberResultSet" parameterType="Member">
+		SELECT *
+		FROM MEMBER
+		WHERE USER_ID = #{userId}
+		AND USER_PWD = #{userPwd}
+		AND STATUS='Y'
+	</select>
+	
+	 <insert id="insertMember" parameterType="Member">
+        INSERT INTO MEMBER 
+        VALUES(SEQ_MID.NEXTVAL, #{userId}, #{userPwd},
+        #{userName}, #{email}, #{birthDay}, #{gender},
+        #{phone}, #{address}, SYSDATE, SYSDATE, DEFAULT)
+     </insert>
+	
+	<select id="selectPwd" parameterType="string" resultType="string">
+		select user_pwd
+		from member
+		where user_id = #{userId}
+			and status='Y'
+	
+	</select>
+	
+	<select id="selectLoginUser" parameterType="Member" resultMap="memberResultSet">
+		select *
+		from member
+		where user_id=#{userId} and status='Y'
+	
+	</select> -->
+	
+	<select id="duplicationCheck" parameterType="string" resultType="int">
+		select count(*)
+		from user_info
+		where user_id = #{id}
+	</select>
+</mapper>
