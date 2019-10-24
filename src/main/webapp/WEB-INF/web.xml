@@ -8,7 +8,7 @@
       <param-name>contextConfigLocation</param-name>
       <param-value>
          classpath:root-context.xml
-         <!-- /WEB-INF/config/action-servlet.xml -->
+         /WEB-INF/config/spring-security.xml
       </param-value>
    </context-param>
    
@@ -49,5 +49,22 @@
 <!--       <servlet-name>user</servlet-name> -->
 <!--       <url-pattern>*.me</url-pattern> -->
 <!--     </servlet-mapping> -->
+
+	<!-- 스프링에서 제공하는 인코딩용 필터사용 -->
+	<!-- 한글 깨짐 방지 -->
+	<filter>
+		<filter-name>encodingFilter</filter-name> <!-- 필터의 name은 원하는대로 지정가능 -->
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<!-- encoding 값을 UTF-8로 만들어준다 -->
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern> <!-- 모든곳에 필터사용한다는 뜻 -->
+	</filter-mapping>
 
 </web-app>

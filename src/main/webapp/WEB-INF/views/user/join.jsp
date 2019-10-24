@@ -107,7 +107,7 @@
                     <li class="nav-item"><a href="travelInformation.html" class="nav-link"><span>여행지 정보</span></a></li>
                     <li class="nav-item"><a href="togetherBoardList.html" class="nav-link"><span>동행 구하기</span></a></li>
                     <li class="nav-item"><a href="review.html" class="nav-link"><span>여행 후기</span></a></li>
-                    <li class="nav-item"><a href="login.html" class="nav-link"><span>로그인</span></a></li>
+                    <li class="nav-item"><a href="login.me" class="nav-link"><span>로그인</span></a></li>
                     <li class="nav-item"><a href="join.me" class="nav-link"><span>회원가입</span></a></li>
                     <li class="nav-item"><a href="myPage.html" class="nav-link"><span>마이페이지</span></a></li>
                 </ul>
@@ -132,66 +132,66 @@
                                 <div class="form-group">
                                     <div class="form-field">
                                         <label for="userId" class="joinInfoLb">아이디</label>
-                                        <input type="text" class="form-control" id="userId" style="width:60%; margin: 0 auto;">
+                                        <input type="text" class="form-control" id="userId" name="userId" style="width:60%; margin: 0 auto;">
                                         <span id="validateId" class="validateLb"></span>
                                         <span id="duplicateId"></span>
                                         <input type="hidden" id="idValidateCheck" value="0">
                                         <input type="hidden" id="idDuplicateCheck" value="0">
                                         <br><br>
                                         <label for="userPwd" class="joinInfoLb">비밀번호</label>
-                                        <input type="password" class="form-control" id="userPwd" style="width:60%; margin: 0 auto;">
+                                        <input type="password" class="form-control" id="userPwd" name="userPwd" style="width:60%; margin: 0 auto;">
                                         <span id="validatePwd" class="validateLb"></span>
                                         <input type="hidden" id="pwdValidateCheck" value="0"><br><br>
                                         <label for="userPwd2" class="joinInfoLb">비밀번호 재확인</label>
-                                        <input type="password" class="form-control" id="userPwd2" style="width:60%; margin: 0 auto;">
+                                        <input type="password" class="form-control" id="userPwd2" name="userPwd2" style="width:60%; margin: 0 auto;">
                                         <span id="validatePwd2" class="validateLb"></span>
                                         <input type="hidden" id="pwdValidateCheck2" value="0"><br><br>
                                         <label for="userName" class="joinInfoLb">이름</label>
-										<input type="text" class="form-control" id="userName" style="width:60%; margin: 0 auto;">
+										<input type="text" class="form-control" id="userName" name="userName" style="width:60%; margin: 0 auto;">
 										<span id="validateName" class="validateLb"></span>
                                         <input type="hidden" id="nameValidateCheck" value="0"><br><br>
 										<label for="nickName" class="joinInfoLb">닉네임</label>
-                                        <input type="text" class="form-control" id="nickName" style="width:60%; margin: 0 auto;">
+                                        <input type="text" class="form-control" id="nickName" name="nickName" style="width:60%; margin: 0 auto;">
                                         <span id="validateNick" class="validateLb"></span>
                                         <input type="hidden" id="nickValidateCheck" value="0"><br><br>
                                         <label for="birthYear" class="joinInfoLb">생년월일</label><br>
-										<input type="text" class="form-control" id="birthYear" placeholder="년(4자리)" maxlength="4">&nbsp;&nbsp;
-										<select name="birthMonth" id="birthMonth" class="form-control">
+										<input type="text" class="form-control" id="birthYear" name="birthYear" placeholder="년(4자리)" maxlength="4">&nbsp;&nbsp;
+										<select name="birthMonth" id="birthMonth" name="birthMonth" class="form-control">
 											<option value="mon">월</option>
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-											<option value="5">5</option>
-											<option value="6">6</option>
-											<option value="7">7</option>
-											<option value="8">8</option>
-											<option value="9">9</option>
+											<option value="01">1</option>
+											<option value="02">2</option>
+											<option value="03">3</option>
+											<option value="04">4</option>
+											<option value="05">5</option>
+											<option value="06">6</option>
+											<option value="07">7</option>
+											<option value="08">8</option>
+											<option value="09">9</option>
 											<option value="10">10</option>
 											<option value="11">11</option>
 											<option value="12">12</option>
 										</select>
-										<input type="text" class="form-control" id="birthDay" placeholder="일" maxlength="2">
+										<input type="text" class="form-control" id="birthDay" name="birthDay" placeholder="일" maxlength="2">
 										<span id="validateBirth" class="validateLb"></span>
                                         <input type="hidden" id="birthYearValidateCheck" value="0">
                                         <input type="hidden" id="birthMonthValidateCheck" value="0">
                                         <input type="hidden" id="birthDayValidateCheck" value="0"><br><br>
 										<label for="phone" class="joinInfoLb">휴대폰 번호</label>
-                                        <input type="text" class="form-control" id="phone" style="width:60%; margin: 0 auto;"
+                                        <input type="text" class="form-control" id="phone" name="phone" style="width:60%; margin: 0 auto;"
                                         placeholder="'-' 없이 입력" maxlength="11">
                                         <span id="validatePhone" class="validateLb"></span>
                                         <input type="hidden" id="phoneValidateCheck" value="0"><br><br>
 										<label for="email" class="joinInfoLb">이메일</label>
-                                        <input type="text" class="form-control" id="email" style="width:60%; margin: 0 auto;">
+                                        <input type="text" class="form-control" id="email" name="email" style="width:60%; margin: 0 auto;">
                                         <span id="validateEmail" class="validateLb"></span>
                                         <input type="hidden" id="emailValidateCheck" value="0"><br><br>										   
                                         <label class="joinInfoLb">프로필 사진</label>&nbsp;&nbsp;&nbsp;&nbsp;
                                         <div class="profile">
                                             <input type="text" class="form-control" id="fileName" value="선택된 파일 없음" readonly>
                                             <label for="uploadBtn" class="form-control btn btn-primary" id="fileLb">찾아보기</label>
-                                            <input type="file" id="uploadBtn" class="uploadBtn">
+                                            <input type="file" id="uploadBtn" class="uploadBtn" name="photo">
                                         </div><br><br>
-                                        <input type="submit" class="form-control btn btn-primary" value="회원가입" onclick="return validate();" style="width:60%; margin: 0 auto;"><br>
+                                        <input type="submit" class="form-control btn btn-primary" onclick="return validate();" value="회원가입" style="width:60%; margin: 0 auto;"><br>
                                     </div>
                             </div>
                         </div>
@@ -535,7 +535,8 @@
     		$('#email').focus();
     		return false;
     	}else{
-    		$('#joinForm').submit();
+    		/* $('#joinForm').submit(); */
+    		return true;
     	}
     }
     </script>

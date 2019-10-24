@@ -55,4 +55,24 @@
 		from user_info
 		where user_id = #{id}
 	</select>
+	
+	<!-- iBatis, myBatis에서  null이 들어가도 되는 column을 사용하기 위해서는 따로 처리를 해줘야 한다. -->
+	<!-- 컬럼 타입을 따로 지정해 줘야됨 -->
+	<insert id="insertUser" parameterType="User">
+		insert into user_info
+		values(#{userId}, #{userPwd}, #{userName}, #{nickName}, #{birthday}, #{phone},
+		#{email}, #{originName, jdbcType=VARCHAR}, #{changeName, jdbcType=VARCHAR}, #{authkey, jdbcType=VARCHAR}, #{checkList, jdbcType=VARCHAR})
+	</insert>
+	
+	<update id="updateAuthkey" parameterType="User">
+		update user_info
+		set authkey = #{authkey}
+		where user_id = #{userId}
+	</update>
+	
+	<update id="confirmAuthkey" parameterType="User">
+		update user_info
+		set authkey = 'Y'
+		where user_id = #{userId}
+	</update>
 </mapper>

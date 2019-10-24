@@ -10,20 +10,20 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/animate.css">
     
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/aos.css">
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/ionicons.min.css">
     
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/flaticon.css">
+    <link rel="stylesheet" href="${contextPath }/resources/css/icomoon.css">
+	<link rel="stylesheet" href="${contextPath }/resources/css/style.css">
 	
 	<style>
 		*{
@@ -52,7 +52,7 @@
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
         <div class="container">
-            <img src="images/air-transport_pink.png" width="50px">&nbsp;&nbsp;&nbsp;<a class="navbar-brand" href="index.html">Plan A</a>
+            <img src="${contextPath }/resources/images/air-transport_pink.png" width="50px">&nbsp;&nbsp;&nbsp;<a class="navbar-brand" href="index.html">Plan A</a>
             <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
             </button>
@@ -60,13 +60,13 @@
             <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav nav ml-auto">
                 <li class="nav-item"><a href="myRoute.html" class="nav-link"><span>나만의 여행</span></a></li>
-                <li class="nav-item"><a href="tammaInfo.html" class="nav-link"><span>테마 여행</span></a></li>
-                <li class="nav-item"><a href="travelInformation.html" class="nav-link"><span>여행지 정보</span></a></li>
-                <li class="nav-item"><a href="togetherBoardList.html" class="nav-link"><span>동행 구하기</span></a></li>
-                <li class="nav-item"><a href="review.html" class="nav-link"><span>여행 후기</span></a></li>
-                <li class="nav-item"><a href="login.html" class="nav-link"><span>로그인</span></a></li>
-                <li class="nav-item"><a href="join.html" class="nav-link"><span>회원가입</span></a></li>
-                <li class="nav-item"><a href="myPage.html" class="nav-link"><span>마이페이지</span></a></li>
+			  	<li class="nav-item"><a href="tammaInfo.html" class="nav-link"><span>테마 여행</span></a></li>
+			  	<li class="nav-item"><a href="travelInformation.html" class="nav-link"><span>여행지 정보</span></a></li>
+			  	<li class="nav-item"><a href="togetherBoardList.html" class="nav-link"><span>동행 구하기</span></a></li>
+			  	<li class="nav-item"><a href="review.html" class="nav-link"><span>여행 후기</span></a></li>
+	          	<li class="nav-item"><a href="login.me" class="nav-link"><span>로그인</span></a></li>
+			  	<li class="nav-item"><a href="join.me" class="nav-link"><span>회원가입</span></a></li>
+			  	<li class="nav-item"><a href="myPage.me" class="nav-link"><span>마이페이지</span></a></li>
             </ul>
             </div>
         </div>
@@ -92,7 +92,7 @@
                                 <input type="password" class="form-control" placeholder="비밀번호" style="width:60%; margin: 0 auto;"><br>
                                 <input type="submit" class="form-control btn btn-primary" value="로그인" style="width:60%; margin: 0 auto;"><br>
                                 <span id="findIdPw"><a href="searchIdPwd.html">아이디/비밀번호 찾기</a></span>
-                                <span id="join"><a href="join.html">회원가입</a></span><br><br>
+                                <span id="join"><a href="join.me">회원가입</a></span><br><br>
                                 </div>
                             </div>
                         </div>
@@ -149,23 +149,22 @@
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
-    
-    <script src="js/main.js"></script>
-
+    <script src="${contextPath }/resources/js/jquery.min.js"></script>
+  	<script src="${contextPath }/resources/js/jquery-migrate-3.0.1.min.js"></script>
+  	<script src="${contextPath }/resources/js/popper.min.js"></script>
+  	<script src="${contextPath }/resources/js/bootstrap.min.js"></script>
+  	<script src="${contextPath }/resources/js/jquery.easing.1.3.js"></script>
+  	<script src="${contextPath }/resources/js/jquery.waypoints.min.js"></script>
+  	<script src="${contextPath }/resources/js/jquery.stellar.min.js"></script>
+  	<script src="${contextPath }/resources/js/owl.carousel.min.js"></script>
+  	<script src="${contextPath }/resources/js/jquery.magnific-popup.min.js"></script>
+  	<script src="${contextPath }/resources/js/aos.js"></script>
+  	<script src="${contextPath }/resources/js/jquery.animateNumber.min.js"></script>
+  	<script src="${contextPath }/resources/js/scrollax.min.js"></script>
+  	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  	<script src="${contextPath }/resources/js/google-map.js"></script>
+  
+  	<script src="${contextPath }/resources/js/main.js"></script>
     </body>
 
 </html>
